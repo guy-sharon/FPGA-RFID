@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sat Nov  9 20:45:17 2024
+# Process ID: 9360
+# Current directory: D:/FPGA/Xilinx/Projects/RFID/RFID.sim/sim_1/behav/xsim
+# Command line: vivado.exe -mode batch -notrace -nojournal -log vivado_wc_pre.log -source vivado_wc_pre.tcl
+# Log file: D:/FPGA/Xilinx/Projects/RFID/RFID.sim/sim_1/behav/xsim/vivado_wc_pre.log
+# Journal file: 
+# Running On        :Guy
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz
+# CPU Frequency     :3600 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16848 MB
+# Swap memory       :4100 MB
+# Total Virtual     :20949 MB
+# Available Virtual :4708 MB
+#-----------------------------------------------------------
+source vivado_wc_pre.tcl -notrace
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/FPGA/Xilinx/Projects/RFID/RFID.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 553.648 ; gain = 238.031
+ERROR: [Simulator 45-6] No active Vivado Simulator simulation.  To use this command you must first start a simulation using Vivado Simulator.
+
+ERROR: Script failed:"C:/Users/guysh/AppData/Roaming/Xilinx/Vivado/simulate.tcl"
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  9 20:45:30 2024...
