@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/FPGA/Xilinx/Projects/RFID/RFID.runs/synth_1'
+HD_PWD='D:/git/FPGA-RFID/RFID.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

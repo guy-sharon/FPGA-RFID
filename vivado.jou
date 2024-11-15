@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Nov 13 06:46:49 2024
+# Process ID: 2020
+# Current directory: D:/git/FPGA-RFID
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16116 D:\git\FPGA-RFID\RFID.xpr
+# Log file: D:/git/FPGA-RFID/vivado.log
+# Journal file: D:/git/FPGA-RFID\vivado.jou
+# Running On        :DESKTOP-QT3SDF3
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 5 5600X 6-Core Processor             
+# CPU Frequency     :3700 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :17078 MB
+# Swap memory       :16106 MB
+# Total Virtual     :33184 MB
+# Available Virtual :24538 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/git/FPGA-RFID/RFID.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source top.tcl

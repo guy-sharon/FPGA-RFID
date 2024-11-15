@@ -17,11 +17,9 @@ begin
      generic map(freq_in_hz => MAIN_CLOCK_FREQ_HZ, freq_out_hz => UART_BAUDRATE)
      port map(clk_in => clk_12Mhz, clk_out => clk_uart);
 
-    uart_tx <= clk_12Mhz;
-
-    -- uart : entity work.uart
-    --     port map(clk_in => clk_uart,
-    --              msg    => "Hello world!\n",
-    --              tx     => uart_tx);
+    uart : entity work.uart
+        port map(clk_in => clk_uart,
+                 msg    => "Hello world!\n",
+                 tx     => uart_tx);
 
 end Behavioral;

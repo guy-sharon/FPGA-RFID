@@ -1,9 +1,8 @@
 # compile vhdl design source files
-vhdl2008 work  \
-"../../../../RFID.srcs/sources_1/new/clk_div.vhd" \
-
 vhdl2008 xil_defaultlib  \
+"../../../../RFID.srcs/sources_1/new/clk_div.vhd" \
 "../../../../RFID.srcs/sources_1/new/typedefs.vhd" \
+"../../../../RFID.srcs/sources_1/new/uart.vhd" \
 "../../../../RFID.srcs/sources_1/new/top.vhd" \
 
 # Do not sort compile order

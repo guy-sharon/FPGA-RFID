@@ -2,5 +2,7 @@
 2020.2
 May 22 2024
 19:03:11
-D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/top.vhd,1731446239,vhdl2008,,,,top,,,,,,,,
-D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/typedefs.vhd,1731172671,vhdl2008,D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/top.vhd,,,typedefs,,,,,,,,
+D:/git/FPGA-RFID/RFID.srcs/sources_1/new/clk_div.vhd,1731446722,vhdl2008,D:/git/FPGA-RFID/RFID.srcs/sources_1/new/top.vhd,,,clk_div,,,,,,,,
+D:/git/FPGA-RFID/RFID.srcs/sources_1/new/top.vhd,1731654117,vhdl2008,,,,top,,,,,,,,
+D:/git/FPGA-RFID/RFID.srcs/sources_1/new/typedefs.vhd,1731659776,vhdl2008,D:/git/FPGA-RFID/RFID.srcs/sources_1/new/top.vhd;D:/git/FPGA-RFID/RFID.srcs/sources_1/new/uart.vhd,,,typedefs,,,,,,,,
+D:/git/FPGA-RFID/RFID.srcs/sources_1/new/uart.vhd,1731665670,vhdl2008,D:/git/FPGA-RFID/RFID.srcs/sources_1/new/top.vhd,,,uart,,,,,,,,

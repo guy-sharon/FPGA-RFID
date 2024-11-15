@@ -1,0 +1,100 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/intelFPGA/18.1
+Eclk_div
+Z0 w1731446722
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dD:/git/FPGA-RFID
+8D:/git/FPGA-RFID/RFID.srcs/sources_1/new/clk_div.vhd
+FD:/git/FPGA-RFID/RFID.srcs/sources_1/new/clk_div.vhd
+l0
+L4
+Vgjj7Dh;`_L7=23cjaCRAB2
+!s100 2F_dh7nzH4EC0@[3nH75J2
+Z4 OV;C;10.5b;63
+32
+Z5 !s110 1731618606
+!i10b 1
+Z6 !s108 1731618606.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/git/FPGA-RFID/RFID.srcs/sources_1/new/clk_div.vhd|
+!s107 D:/git/FPGA-RFID/RFID.srcs/sources_1/new/clk_div.vhd|
+!i113 1
+Z7 o-work work -2002 -explicit
+Z8 tExplicit 1 CvgOpt 0
+Etop
+R0
+Z9 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z10 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z11 DPx4 work 8 typedefs 0 22 BY:44Tfn;Lj91K<e;<HDm2
+R1
+R2
+R3
+Z12 8D:\git\FPGA-RFID\RFID.srcs\sources_1\new\top.vhd
+Z13 FD:\git\FPGA-RFID\RFID.srcs\sources_1\new\top.vhd
+l0
+L5
+V2_zB3cfho<9>U0Y1oX=3>0
+!s100 4j`zA0QBz?b?db@Y[2Fdb2
+R4
+32
+R5
+!i10b 1
+R6
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\git\FPGA-RFID\RFID.srcs\sources_1\new\top.vhd|
+Z15 !s107 D:\git\FPGA-RFID\RFID.srcs\sources_1\new\top.vhd|
+!i113 1
+R7
+R8
+Abehavioral
+DEx4 work 7 clk_div 0 22 gjj7Dh;`_L7=23cjaCRAB2
+R9
+R10
+R11
+R1
+R2
+DEx4 work 3 top 0 22 2_zB3cfho<9>U0Y1oX=3>0
+l14
+L12
+VEB4mcFY7dDz_3BT3?AS>k2
+!s100 QX7O^^BD79]D3FUEboYUa3
+R4
+32
+R5
+!i10b 1
+R6
+R14
+R15
+!i113 1
+R7
+R8
+Ptypedefs
+R9
+R10
+R1
+R2
+R0
+R3
+8D:/git/FPGA-RFID/RFID.srcs/sources_1/new/typedefs.vhd
+FD:/git/FPGA-RFID/RFID.srcs/sources_1/new/typedefs.vhd
+l0
+L6
+VBY:44Tfn;Lj91K<e;<HDm2
+!s100 ;cc_N0kcBlUSIb@@7iAkO0
+R4
+32
+R5
+!i10b 1
+R6
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/git/FPGA-RFID/RFID.srcs/sources_1/new/typedefs.vhd|
+!s107 D:/git/FPGA-RFID/RFID.srcs/sources_1/new/typedefs.vhd|
+!i113 1
+R7
+R8

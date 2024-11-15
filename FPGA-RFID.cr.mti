@@ -1,0 +1,46 @@
+D:/git/FPGA-RFID/RFID.srcs/sources_1/new/uart.vhd {0 {vcom -work work -2002 -explicit -stats=none D:/git/FPGA-RFID/RFID.srcs/sources_1/new/uart.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package typedefs
+-- Compiling entity uart
+** Error: D:/git/FPGA-RFID/RFID.srcs/sources_1/new/uart.vhd(8): (vcom-1136) Unknown identifier "message".
+** Error: D:/git/FPGA-RFID/RFID.srcs/sources_1/new/uart.vhd(12): VHDL Compiler exiting
+
+} {10.0 12.0} {}} D:/git/FPGA-RFID/RFID.srcs/sources_1/new/typedefs.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/git/FPGA-RFID/RFID.srcs/sources_1/new/typedefs.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling package typedefs
+
+} {} {}} D:/git/FPGA-RFID/RFID.srcs/sources_1/new/clk_div.vhd {0 {vcom -work work -2002 -explicit -stats=none D:/git/FPGA-RFID/RFID.srcs/sources_1/new/clk_div.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity clk_div
+-- Compiling architecture Behavioral of clk_div
+** Error: D:/git/FPGA-RFID/RFID.srcs/sources_1/new/clk_div.vhd(25): Cannot read output "clk_out".
+	VHDL 2008 allows reading outputs.
+	This facility is enabled by compiling with -2008.
+** Error: D:/git/FPGA-RFID/RFID.srcs/sources_1/new/clk_div.vhd(31): VHDL Compiler exiting
+
+} {8.0 9.0 11.0 12.0} {}} D:/git/FPGA-RFID/RFID.srcs/sources_1/new/top.vhd {1 {vcom -work work -2002 -explicit -stats=none {D:\git\FPGA-RFID\RFID.srcs\sources_1\new\top.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package typedefs
+-- Compiling entity top
+-- Compiling architecture Behavioral of top
+-- Loading entity clk_div
+
+} {} {}}
