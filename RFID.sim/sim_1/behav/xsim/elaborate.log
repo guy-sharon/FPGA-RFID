@@ -16,7 +16,8 @@ Compiling package ieee.math_real
 Compiling package xil_defaultlib.typedefs
 Compiling package ieee.std_logic_textio
 Compiling architecture behavioral of entity xil_defaultlib.clk_div [\clk_div(freq_in_hz=12000000,fre...]
+Compiling architecture behavioral of entity xil_defaultlib.clk_div [\clk_div(freq_in_hz=12000000,fre...]
 Compiling architecture behavioral of entity xil_defaultlib.uart [\uart(0,12)\]
-Compiling architecture behavioral of entity xil_defaultlib.DAC1BIT [\DAC1BIT(max_value=100)\]
+Compiling architecture behavioral of entity xil_defaultlib.DAC1BIT [\DAC1BIT(max_value=65536)\]
 Compiling architecture behavioral of entity xil_defaultlib.top
 Built simulation snapshot top_behav

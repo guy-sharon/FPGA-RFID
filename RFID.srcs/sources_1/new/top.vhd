@@ -12,13 +12,20 @@ entity top is
 end top;
 
 architecture Behavioral of top is
-    signal clk_uart     : std_logic;
+    signal clk_uart         : std_logic;
+    signal rfid_sig_clk     : std_logic;
+
+    signal sig_phase_ind    : integer := 0;
 begin
     
     ------------------------------------------ CLOCKS ------------------------------------------
-    clk_div_inst: entity work.clk_div
+    uart_clk_div: entity work.clk_div
         generic map(freq_in_hz => MAIN_CLOCK_FREQ_HZ, freq_out_hz => UART_BAUDRATE)
         port map(clk_in => clk_12Mhz, clk_out => clk_uart);
+
+    rfid_sig_clk_div: entity work.clk_div
+        generic map(freq_in_hz => MAIN_CLOCK_FREQ_HZ, freq_out_hz => RFID_SIGGEN_CLOCK_FREQ_HZ)
+        port map(clk_in => clk_12Mhz, clk_out => rfid_sig_clk);
     ------------------------------------------ CLOCKS ------------------------------------------
 
     ------------------------------------------ UART ------------------------------------------
@@ -30,11 +37,18 @@ begin
     ------------------------------------------ UART ------------------------------------------
 
     ------------------------------------------ DAC ------------------------------------------
+    process (rfid_sig_clk)
+    begin
+        if rising_edge(rfid_sig_clk) then
+            sig_phase_ind <= (sig_phase_ind + 1) mod RFID_SIG_COSINE_TABLE_LEN;
+        end if;
+    end process;
+
     DAC : entity work.DAC1BIT
-        generic map (max_value => 100)
+        generic map (max_value => DAC_MAX_VALUE)
         port map(
             clk_in => clk_12Mhz,
-            value => 33,
+            value => RFID_SIG_COSINE_TABLE(sig_phase_ind),
             pinout => pio1);
     ------------------------------------------ DAC ------------------------------------------
 end Behavioral;
