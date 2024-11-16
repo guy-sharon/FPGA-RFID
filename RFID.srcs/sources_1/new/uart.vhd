@@ -32,7 +32,6 @@ begin
                 tx <= val_reg(bit_cnt-1);
             end if;
 
-            
             bit_cnt := (bit_cnt + 1) mod UART_NUM_BITS_PER_SYMBOL;
         end if;
     end process;

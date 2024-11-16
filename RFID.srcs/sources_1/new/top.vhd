@@ -19,7 +19,7 @@ begin
 
     uart : entity work.uart
         port map(clk_in => clk_uart,
-                 msg    => "Hello world!\n",
+                 msg    => "012\n",
                  tx     => uart_tx);
 
 end Behavioral;
