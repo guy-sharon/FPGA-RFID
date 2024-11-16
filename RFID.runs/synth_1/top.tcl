@@ -73,6 +73,7 @@ OPTRACE "Adding files" START { }
 read_vhdl -vhdl2008 -library xil_defaultlib {
   D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/clk_div.vhd
   D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/typedefs.vhd
+  D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/uart.vhd
   D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/top.vhd
 }
 OPTRACE "Adding files" END { }

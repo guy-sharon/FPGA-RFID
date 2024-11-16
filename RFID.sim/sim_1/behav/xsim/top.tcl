@@ -11,12 +11,12 @@ log_wave -r /
 
 # execute post tcl file
 set rc [catch {
-  puts "source D:\\git\\FPGA-RFID\\simulate.tcl"
-  source "D:\\git\\FPGA-RFID\\simulate.tcl"
+  puts "source D:\\FPGA\\Xilinx\\Projects\\RFID\\simulate.tcl"
+  source "D:\\FPGA\\Xilinx\\Projects\\RFID\\simulate.tcl"
 } result]
 if {$rc} {
   [catch {send_msg_id USF-simtcl-1 ERROR "$result"}]
-  [catch {send_msg_id USF-simtcl-2 ERROR "Script failed:D:\\git\\FPGA-RFID\\simulate.tcl"}]
+  [catch {send_msg_id USF-simtcl-2 ERROR "Script failed:D:\\FPGA\\Xilinx\\Projects\\RFID\\simulate.tcl"}]
 }
 
 run 1000ns

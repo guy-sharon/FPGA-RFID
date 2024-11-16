@@ -5,6 +5,8 @@ set synth_logfile ${rootdir}\\${proj}.runs\\synth_1\\runme.log
 set impl_logfile ${rootdir}\\${proj}.runs\\impl_1\\runme.log
 set fail_sound misc\\fail_sound.bat
 set success_sound misc\\success_sound.bat
+set synth_complete misc\\synth_complete.bat
+set synth_complete_sound_played 0
 
 open_project D:/FPGA/Xilinx/Projects/RFID/RFID.xpr
 
@@ -24,6 +26,13 @@ while {true} {
                 set synth_failed 1
             }
         }
+        if {[string first "synth_design completed successfully" $file_data] != -1} {
+            if {$synth_complete_sound_played == 0} {
+                exec $synth_complete
+                set synth_complete_sound_played 1
+            }
+        }
+        
     }
     if $synth_failed {
         exec $fail_sound
@@ -36,7 +45,6 @@ while {true} {
         close $fp
         if {[string first "write_bitstream completed successfully" $file_data] != -1} {
             update_compile_order -fileset sources_1
-            exec $success_sound
             break
         }
     }
@@ -53,3 +61,4 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7s25_0]
 set_property PROGRAM.FILE {D:/FPGA/Xilinx/Projects/RFID/RFID.runs/impl_1/top.bit} [get_hw_devices xc7s25_0]
 program_hw_devices [get_hw_devices xc7s25_0]
 refresh_hw_device [lindex [get_hw_devices xc7s25_0] 0]
+exec $success_sound
