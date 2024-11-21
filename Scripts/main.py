@@ -1,7 +1,11 @@
 import serial
+import glob
 import numpy as np
 import matplotlib.pyplot as plt
-
+from matplotlib.widgets import Button, Slider
+import re
+import os
+import math
 
 ###############################################################################################
 ############################################ Utils ############################################
@@ -36,10 +40,16 @@ def read_consts_from_vhdl(vhdl_file_path):
             mapping[key] = int(eval(mapping[key]))
         except:
             try:
+                known_words = {"gcd": "math.gcd"}
                 eval_str = mapping[key]
-                for subkey in mapping:
-                    if subkey in mapping[key]:
+                subkeys = sorted(mapping.keys(), key=lambda x: -len(x))
+                for subkey in subkeys:
+                    str_to_rep = "mapping['{}']".format(subkey)
+                    if subkey in eval_str and len(re.findall("mapping\['{}.*\]".format(subkey), eval_str)) == 0:
                         eval_str = eval_str.replace(subkey, "mapping['{}']".format(subkey))
+                for known_word in known_words:
+                    if known_word in eval_str:
+                        eval_str = eval_str.replace(known_word, known_words[known_word])
                 mapping[key] = int(eval(eval_str))
             except:
                 print('could not parse constant "{}"'.format(key))
@@ -49,7 +59,7 @@ def read_consts_from_vhdl(vhdl_file_path):
 
         
 def read_sim_results():
-    with open(r"../\RFID\RFID.sim\sim_1\behav\xsim\output_results.txt") as f:
+    with open(glob.glob("**/output_results.txt", recursive=True)[0]) as f:
         return list(map(int, f.readlines()))
 ###############################################################################################
 ############################################ Utils ############################################
@@ -66,14 +76,42 @@ def test_read_serial():
         
         
 def test_plot_RC_circuit_sim_results(config):
-    circuit = RCCircuit(R=1000, C=2.7e-9)
+    sim_results = read_sim_results()[1:1000]
     clk_freq = 12.0e6
+    Rs = np.linspace(10, 1000, 1000)
+    Cs = np.linspace(25, 100, 100)*1e-9
     dt = 1 / clk_freq
+    
+    def update(val):
+        C = Cs[np.argmin(np.abs(Cs - C_slider.val))]
+        R = Rs[np.argmin(np.abs(Rs - R_slider.val))]
+        circuit = RCCircuit(R=R, C=C)
+        voltages = []
+        for val in sim_results:
+            circuit.step(val, dt)
+            voltages.append(circuit.v)
+        line.set_ydata(voltages)
+        fig.canvas.draw_idle()
+    
+    circuit = RCCircuit(R=Rs[0], C=Cs[0])
     voltages = []
-    for val in read_sim_results():
+    for val in sim_results:
         circuit.step(val, dt)
         voltages.append(circuit.v)
-    plt.plot(np.arange(0, len(voltages))*dt, voltages)
+        
+    fig, ax = plt.subplots()
+    fig.subplots_adjust(bottom=0.25)
+    line,  = ax.plot(np.arange(0, len(voltages))*dt, voltages)
+    #plt.xlim(0, 0.1e-3)
+    
+    axR = fig.add_axes([0.22, 0.10, 0.58, 0.03])
+    R_slider = Slider(ax=axR, label='Resistance [Ohm]', valmin=Rs[0], valmax=Rs[-1], valinit=Rs[0],)
+    R_slider.on_changed(update)
+    
+    axC = fig.add_axes([0.22, 0.05, 0.58, 0.03])
+    C_slider = Slider(ax=axC, label='Capacitance [F]', valmin=Cs[0], valmax=Cs[-1], valinit=Cs[0],)
+    C_slider.on_changed(update)
+
     plt.show()
 
 
@@ -90,10 +128,10 @@ def test_create_cosine_table(config):
 ###############################################################################################
 
 config = read_consts_from_vhdl(r".\RFID.srcs\sources_1\new\typedefs.vhd")
-print(config)
 
 if __name__ == "__main__":
-    test_create_cosine_table(config)
-    #test_plot_RC_circuit_sim_results(config)
+    #print(config)
+    #test_create_cosine_table(config)
+    test_plot_RC_circuit_sim_results(config)
     
 

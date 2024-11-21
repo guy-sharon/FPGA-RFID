@@ -24,7 +24,7 @@ begin
         port map(clk_in => clk_12Mhz, clk_out => clk_uart);
 
     rfid_sig_clk_div: entity work.clk_div
-        generic map(freq_in_hz => MAIN_CLOCK_FREQ_HZ, freq_out_hz => RFID_SIGGEN_CLOCK_FREQ_HZ)
+        generic map(freq_in_hz => MAIN_CLOCK_FREQ_HZ, freq_out_hz => RFID_SIG_CLK_FREQ_HZ)
         port map(clk_in => clk_12Mhz, clk_out => rfid_sig_clk);
     ------------------------------------------ CLOCKS ------------------------------------------
 
@@ -40,7 +40,7 @@ begin
     process (rfid_sig_clk)
     begin
         if rising_edge(rfid_sig_clk) then
-            sig_phase_ind <= (sig_phase_ind + 1) mod RFID_SIG_COSINE_TABLE_LEN;
+            sig_phase_ind <= (sig_phase_ind + RFID_SIG_COSINE_TABLE_STEP_SIZE) mod RFID_SIG_COSINE_TABLE_LEN;
         end if;
     end process;
 

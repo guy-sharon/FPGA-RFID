@@ -23,8 +23,8 @@ begin
     file_open(file_RESULTS, "output_results.txt", write_mode);
     
     process (clk_in)
-        variable cnt    : integer := 0;
-        variable v_OLINE     : line;
+        variable cnt            : integer := 0;
+        variable v_OLINE        : line;
     begin
 
         if rising_edge(clk_in) then
