@@ -7,7 +7,7 @@ entity top is
         clk_12Mhz       : in  std_logic;
 
         uart_tx         : out std_logic     := '1';
-        pio1            : out std_logic     := '0'
+        pio27            : out std_logic     := '0'
     );
 end top;
 
@@ -49,6 +49,7 @@ begin
         port map(
             clk_in => clk_12Mhz,
             value => RFID_SIG_COSINE_TABLE(sig_phase_ind),
-            pinout => pio1);
+            pinout => pio27);
     ------------------------------------------ DAC ------------------------------------------
+    
 end Behavioral;

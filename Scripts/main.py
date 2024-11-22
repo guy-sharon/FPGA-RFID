@@ -128,10 +128,11 @@ def test_create_cosine_table(config):
 ###############################################################################################
 
 config = read_consts_from_vhdl(r".\RFID.srcs\sources_1\new\typedefs.vhd")
+del config['RFID_SIG_COSINE_TABLE']
 
 if __name__ == "__main__":
-    #print(config)
+    print(config)
     #test_create_cosine_table(config)
-    test_plot_RC_circuit_sim_results(config)
+    #test_plot_RC_circuit_sim_results(config)
     
 
