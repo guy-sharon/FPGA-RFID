@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Playground/cmod-s7-xadc/cmod-s7-xadc.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xadc_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Playground/cmod-s7-xadc/cmod-s7-xadc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Playground/cmod-s7-xadc/cmod-s7-xadc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Playground/cmod-s7-xadc/cmod-s7-xadc.srcs/sources_1/new/spi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-311] analyzing module dff
+INFO: [VRFC 10-311] analyzing module spi_master
+INFO: [VRFC 10-311] analyzing module spi_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Playground/cmod-s7-xadc/cmod-s7-xadc.srcs/sources_1/new/xadc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xadc
+INFO: [VRFC 10-311] analyzing module top

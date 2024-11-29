@@ -5,6 +5,6 @@ May 22 2024
 D:/git/FPGA-RFID/RFID.srcs/sources_1/new/DAC1BIT.vhd,1732052931,vhdl2008,D:/git/FPGA-RFID/RFID.srcs/sources_1/new/top.vhd,,,dac1bit,,,,,,,,
 D:/git/FPGA-RFID/RFID.srcs/sources_1/new/clk_div.vhd,1731446722,vhdl2008,D:/git/FPGA-RFID/RFID.srcs/sources_1/new/top.vhd,,,clk_div,,,,,,,,
 D:/git/FPGA-RFID/RFID.srcs/sources_1/new/top.vhd,1732052981,vhdl2008,,,,top,,,,,,,,
-D:/git/FPGA-RFID/RFID.srcs/sources_1/new/typedefs.vhd,1732133241,vhdl2008,D:/git/FPGA-RFID/RFID.srcs/sources_1/new/top.vhd;D:/git/FPGA-RFID/RFID.srcs/sources_1/new/uart.vhd,,,typedefs,,,,,,,,
+D:/git/FPGA-RFID/RFID.srcs/sources_1/new/typedefs.vhd,1732283935,vhdl2008,D:/git/FPGA-RFID/RFID.srcs/sources_1/new/top.vhd;D:/git/FPGA-RFID/RFID.srcs/sources_1/new/uart.vhd,,,typedefs,,,,,,,,
 D:/git/FPGA-RFID/RFID.srcs/sources_1/new/uart.vhd,1731877985,vhdl2008,D:/git/FPGA-RFID/RFID.srcs/sources_1/new/top.vhd,,,uart,,,,,,,,
 D:/git/FPGA-RFID/RFID.srcs/sources_1/new/utils.vhd,1732053193,vhdl2008,D:/git/FPGA-RFID/RFID.srcs/sources_1/new/typedefs.vhd,,,utils,,,,,,,,

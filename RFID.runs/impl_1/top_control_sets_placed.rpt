@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Fri Nov 22 15:44:05 2024
+| Date         : Fri Nov 22 16:39:14 2024
 | Host         : DESKTOP-QT3SDF3 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -61,7 +61,7 @@ Table of Contents
 | No           | No                    | No                     |              50 |           17 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              69 |           19 |
-| Yes          | No                    | No                     |              42 |           11 |
+| Yes          | No                    | No                     |              42 |           10 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -75,11 +75,11 @@ Table of Contents
 +--------------------------------+-----------------------------+--------------------------------+------------------+----------------+--------------+
 |  clk_uart_BUFG                 |                             |                                |                1 |              1 |         1.00 |
 |  clk_uart_BUFG                 |                             | uart/bit_cnt_reg[3]_i_1_n_0    |                3 |              5 |         1.67 |
-|  clk_uart_BUFG                 | uart/byte_cnt[3]_i_1_n_0    |                                |                3 |             10 |         3.33 |
+|  clk_uart_BUFG                 | uart/byte_cnt[3]_i_1_n_0    |                                |                2 |             10 |         5.00 |
 |  rfid_sig_clk_div/rfid_sig_clk |                             |                                |                5 |             14 |         2.80 |
 |  clk_uart_BUFG                 | uart/bit_cnt_reg[3]_i_1_n_0 |                                |                8 |             32 |         4.00 |
-|  clk_12Mhz_IBUF_BUFG           |                             | uart_clk_div/cnt[0]_i_1__0_n_0 |                8 |             32 |         4.00 |
 |  clk_12Mhz_IBUF_BUFG           |                             | rfid_sig_clk_div/clear         |                8 |             32 |         4.00 |
+|  clk_12Mhz_IBUF_BUFG           |                             | uart_clk_div/cnt[0]_i_1__0_n_0 |                8 |             32 |         4.00 |
 |  clk_12Mhz_IBUF_BUFG           |                             |                                |               11 |             35 |         3.18 |
 +--------------------------------+-----------------------------+--------------------------------+------------------+----------------+--------------+
 

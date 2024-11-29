@@ -59,7 +59,7 @@ def read_consts_from_vhdl(vhdl_file_path):
 
         
 def read_sim_results():
-    with open(glob.glob("**/output_results.txt", recursive=True)[0]) as f:
+    with open(glob.glob("**/*sim/**/output_results.txt", recursive=True)[0], 'r') as f:
         return list(map(int, f.readlines()))
 ###############################################################################################
 ############################################ Utils ############################################
@@ -123,6 +123,21 @@ def test_create_cosine_table(config):
         table.append(int(DAC_MAX_VALUE + DAC_MAX_VALUE * np.sin(3*np.pi/2+2*np.pi*i/table_len)))
     print(table)
     return table
+
+def test_analyze_siggen_params(config):
+    MAIN_CLOCK_FREQ_HZ                 = int(12e6)
+    RFID_SIG_COSINE_TABLE_LEN          = 100
+    RFID_SIGNAL_FREQ_HZ                = int(125e3)
+    RFID_SIG_CLK_FREQ_HZ               = math.gcd(RFID_SIGNAL_FREQ_HZ * RFID_SIG_COSINE_TABLE_LEN, MAIN_CLOCK_FREQ_HZ)
+    RFID_SIG_COSINE_TABLE_STEP_SIZE    = int((RFID_SIGNAL_FREQ_HZ * RFID_SIG_COSINE_TABLE_LEN) / RFID_SIG_CLK_FREQ_HZ)
+    
+    cosine_table = test_create_cosine_table(config)
+    voltage = []
+    for i in range(0, int(RFID_SIG_COSINE_TABLE_LEN * 5), RFID_SIG_COSINE_TABLE_STEP_SIZE):
+        voltage.append(cosine_table[i % len(cosine_table)])
+    plt.plot(voltage)
+    plt.show()
+    
 ###############################################################################################
 ############################################ Tests ############################################
 ###############################################################################################
@@ -134,5 +149,5 @@ if __name__ == "__main__":
     print(config)
     #test_create_cosine_table(config)
     #test_plot_RC_circuit_sim_results(config)
-    
+    test_analyze_siggen_params(config)
 
