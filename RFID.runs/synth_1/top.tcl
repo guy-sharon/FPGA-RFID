@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/git/FPGA-RFID/RFID.runs/synth_1/top.tcl"
+  variable script "D:/FPGA/Xilinx/Projects/RFID/RFID.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -62,21 +62,21 @@ create_project -in_memory -part xc7s25csga225-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/git/FPGA-RFID/RFID.cache/wt [current_project]
-set_property parent.project_path D:/git/FPGA-RFID/RFID.xpr [current_project]
+set_property webtalk.parent_dir D:/FPGA/Xilinx/Projects/RFID/RFID.cache/wt [current_project]
+set_property parent.project_path D:/FPGA/Xilinx/Projects/RFID/RFID.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo d:/git/FPGA-RFID/RFID.cache/ip [current_project]
+set_property ip_output_repo d:/FPGA/Xilinx/Projects/RFID/RFID.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -vhdl2008 -library xil_defaultlib {
-  D:/git/FPGA-RFID/RFID.srcs/sources_1/new/DAC1BIT.vhd
-  D:/git/FPGA-RFID/RFID.srcs/sources_1/new/clk_div.vhd
-  D:/git/FPGA-RFID/RFID.srcs/sources_1/new/utils.vhd
-  D:/git/FPGA-RFID/RFID.srcs/sources_1/new/typedefs.vhd
-  D:/git/FPGA-RFID/RFID.srcs/sources_1/new/uart.vhd
-  D:/git/FPGA-RFID/RFID.srcs/sources_1/new/top.vhd
+  D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/DAC1BIT.vhd
+  D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/clk_div.vhd
+  D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/utils.vhd
+  D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/typedefs.vhd
+  D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/uart.vhd
+  D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/sources_1/new/top.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -87,12 +87,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/git/FPGA-RFID/RFID.srcs/constrs_1/new/constraints.xdc
-set_property used_in_implementation false [get_files D:/git/FPGA-RFID/RFID.srcs/constrs_1/new/constraints.xdc]
+read_xdc D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/constrs_1/new/constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental D:/git/FPGA-RFID/RFID.srcs/utils_1/imports/synth_1/top.dcp
+read_checkpoint -auto_incremental -incremental D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/utils_1/imports/synth_1/top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

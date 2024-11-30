@@ -54,12 +54,14 @@ begin
     
     
     ------------------------------------------ ADC ------------------------------------------
-    ADC : entity work.xadc_wiz_0 is
-    port (
-        daddr_in        : in  STD_LOGIC_VECTOR (6 downto 0);     -- Address bus for the dynamic reconfiguration port
-        den_in          : in  STD_LOGIC;                         -- Enable Signal for the dynamic reconfiguration port
-        di_in           : in  STD_LOGIC_VECTOR (15 downto 0);    -- Input data bus for the dynamic reconfiguration port
-        dwe_in          : in  STD_LOGIC;                         -- Write Enable for the dynamic reconfiguration port
+    -- channel should be 3 (VP , VN – Dedicated analog inputs)
+    -- drp_enable should only go high for one DCLK period
+    ADC : entity work.xadc_wiz_0
+    port map (
+        daddr_in    =>  x"03",
+        den_in      => drp_enable,
+        di_in       => open,
+        dwe_in      => '0',
         do_out          : out  STD_LOGIC_VECTOR (15 downto 0);   -- Output data bus for dynamic reconfiguration port
         drdy_out        : out  STD_LOGIC;                        -- Data ready signal for the dynamic reconfiguration port
         dclk_in         : in  STD_LOGIC;                         -- Clock input for the dynamic reconfiguration port

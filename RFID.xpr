@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="67" Path="D:/git/FPGA-RFID/RFID.xpr">
+<Project Product="Vivado" Version="7" Minor="67" Path="D:/FPGA/Xilinx/Projects/RFID/RFID.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="ea3de8c04029400882a702c940b4baca"/>

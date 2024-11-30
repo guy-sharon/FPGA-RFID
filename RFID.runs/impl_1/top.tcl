@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "D:/git/FPGA-RFID/RFID.runs/impl_1/top.tcl"
+  variable script "D:/FPGA/Xilinx/Projects/RFID/RFID.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -104,7 +104,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 3
+  set_param chipscope.maxJobs 2
   set_param runs.launchOptions { -jobs 8  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7s25csga225-1
@@ -112,15 +112,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/git/FPGA-RFID/RFID.cache/wt [current_project]
-  set_property parent.project_path D:/git/FPGA-RFID/RFID.xpr [current_project]
-  set_property ip_output_repo D:/git/FPGA-RFID/RFID.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/FPGA/Xilinx/Projects/RFID/RFID.cache/wt [current_project]
+  set_property parent.project_path D:/FPGA/Xilinx/Projects/RFID/RFID.xpr [current_project]
+  set_property ip_output_repo D:/FPGA/Xilinx/Projects/RFID/RFID.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/git/FPGA-RFID/RFID.runs/synth_1/top.dcp
+  add_files -quiet D:/FPGA/Xilinx/Projects/RFID/RFID.runs/synth_1/top.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/git/FPGA-RFID/RFID.srcs/constrs_1/new/constraints.xdc
+  read_xdc D:/FPGA/Xilinx/Projects/RFID/RFID.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
